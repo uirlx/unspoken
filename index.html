@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.88.1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<title>DialogueAgents</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+<div class="container" >
+<header role="banner">
+</header>
+<main role="main">
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+	<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+		<div class="text-center">
+			<h1 style="margin-bottom: 20px;">DialogueAgents: <img src="pics/speech_icon.png" alt="Speech Icon" style="height: 40px; vertical-align: middle;"></h1>
+			<h4 style="margin-top: 30px;">A Hybrid Agent-Based Speech Synthesis Framework for Multi-Party Dialogue</h4>
+			<!-- 添加作者信息，斜体并居中显示，调整间隔 -->
+			<p style="font-style: italic; text-align: center; margin-top: 10px;">Xiang Li, Duyi Pan, Hongru Xiao, Jiale Han, Jing Tang, Jiabao Ma, Bo Cheng, Wei Wang</p>
+			<p class="fst-italic mb-0"></p>
+		</div>
+		<style>
+		p {
+			text-align: justify;
+			text-justify: inter-word;
+		}
+		</style>
+		<p style="margin-top: 10px;">
+			<b>Abstract.</b> 
+			Speech synthesis is essential for advancing human-computer interaction. However, current datasets for training speech synthesis models often suffer from high construction costs, limited role diversity, and poor emotional expression. In this paper, we propose DialogueAgent, a hybrid agent-based speech synthesis framework for multi-party dialogue. DialogueAgent employs three specialized agents—<b>Script Writer</b>, <b>Speech Generator</b>, and <b>Dialogue Critic</b>—to collaboratively generate and refine dialogues. By iteratively adapting the script to better fit the conversation scenario through speech review and feedback, the framework enhances emotional expressiveness and paralinguistic features in synthesized speech. Using this framework, we introduce MultiTalk, a bilingual, multi-party, multi-turn speech dialogue dataset covering diverse topics. Additionally, we present two metrics tailored to dialogue-level speech evaluation to measure the emotional expressiveness and naturalness of turn-taking. Extensive experiments demonstrate the effectiveness of our framework and the high quality of the MultiTalk dataset.
+			<br>
+			<br>
+				This page is <b>intended</b> solely for the purpose of research demonstration.
+			<br>
+		  </p>
+	</div>		
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">		
+	<h2 id="model-overview" style="text-align: center;">Overview</h2>
+	<body>
+		<p style="text-align: center;">
+			<img src="pics/framework.svg" width="1200">
+		</p>
+	</body>
+
+</div>
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+    <h2 id="sr-samples" style="text-align: center;">Q&A</h2>
+    
+    <div class="container">
+        <!-- Question 1 -->
+        <h3 style="color: #4285f4;">Question 1:</h3>
+        <p>What is the implied meaning when the speaker says "it's raining cats and dogs"?</p>
+        
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/rain.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p><u>A. It's raining very heavily</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>B. Animals are falling from the sky</p>
+            <p>C. The weather is unpredictable</p>
+            <p>D. The speaker is exaggerating</p>
+            <p>E. There's a pet parade happening</p>
+        </div>
+
+        <!-- Question 2 -->
+        <h3 style="color: #4285f4;">Question 2:</h3>
+        <p>What emotion is the speaker expressing in this audio clip?</p>
+        
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/question2.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. Anger</p>
+            <p><u>B. Excitement</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>C. Sadness</p>
+            <p>D. Fear</p>
+            <p>E. Confusion</p>
+        </div>
+
+        <!-- Question 3 -->
+        <h3 style="color: #4285f4;">Question 3:</h3>
+        <p>What is the main topic of this conversation?</p>
+        
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/question3.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. Weather forecast</p>
+            <p>B. Family vacation</p>
+            <p><u>C. Career planning</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. Shopping plans</p>
+            <p>E. Weekend activities</p>
+        </div>
+
+        <!-- Question 4 -->
+        <h3 style="color: #4285f4;">Question 4:</h3>
+        <p>What is the speaker's attitude towards the situation?</p>
+        
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/question4.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. Indifferent</p>
+            <p>B. Hostile</p>
+            <p>C. Nervous</p>
+            <p><u>D. Optimistic</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>E. Skeptical</p>
+        </div>
+
+        <!-- Question 5 -->
+        <h3 style="color: #4285f4;">Question 5:</h3>
+        <p>What is the appropriate response to this conversation?</p>
+        
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/question5.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. Change the subject</p>
+            <p>B. Disagree strongly</p>
+            <p><u>C. Show understanding and support</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. Remain silent</p>
+            <p>E. Express doubt</p>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">	
+	<h2 id=Ethics-Statement style="text-align: center;">	
+		Ethics Statement
+	</h2>
+	<p>
+		Given the ability of DialogueAgents to synthesize speech while preserving the speaker's identity, potential risks of misuse, such as deceiving voice recognition systems or impersonating specific individuals, may arise. In our experiments, we operate under the assumption that users willingly agree to be the designated speaker for speech synthesis. In the event of the model's application to unknown speakers in real-world scenarios, it is imperative to establish a protocol ensuring explicit consent from speakers for the utilization of their voices. Additionally, implementing a synthetic speech detection model is recommended to mitigate the potential for misuse.
+	</p>
+</div>
+
+
+
+</article>
+</main>
+</div>
+
+</body>
+</html>
