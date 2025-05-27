@@ -26,7 +26,8 @@
 	<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
 		<div class="text-center">
 			<h1 style="margin-bottom: 20px;"><img src="pics/speech_icon.png" alt="Speech Icon" style="height: 80px; vertical-align: middle;"></h1>
-			<h4 style="margin-top: 30px;"> A Study on Metaphorical Reasoning via UNSPOKEN</h4>
+			<h4 style="margin-top: 30px;"> Can Audio Language Models Listen Between the Lines?
+                A Study on Metaphorical Reasoning via UNSPOKEN</h4>
 			<!-- 添加作者信息，斜体并居中显示，调整间隔 -->
 			<p style="font-style: italic; text-align: center; margin-top: 10px;"></p>
 			<p class="fst-italic mb-0"></p>
@@ -39,22 +40,13 @@
 		</style>
 		<p style="margin-top: 10px;">
 			<b>Abstract.</b> 
-			Speech synthesis is essential for advancing human-computer interaction. However, current datasets for training speech synthesis models often suffer from high construction costs, limited role diversity, and poor emotional expression. In this paper, we propose DialogueAgent, a hybrid agent-based speech synthesis framework for multi-party dialogue. DialogueAgent employs three specialized agents—<b>Script Writer</b>, <b>Speech Generator</b>, and <b>Dialogue Critic</b>—to collaboratively generate and refine dialogues. By iteratively adapting the script to better fit the conversation scenario through speech review and feedback, the framework enhances emotional expressiveness and paralinguistic features in synthesized speech. Using this framework, we introduce MultiTalk, a bilingual, multi-party, multi-turn speech dialogue dataset covering diverse topics. Additionally, we present two metrics tailored to dialogue-level speech evaluation to measure the emotional expressiveness and naturalness of turn-taking. Extensive experiments demonstrate the effectiveness of our framework and the high quality of the MultiTalk dataset.
+			While recent Audio Language Models (ALMs) have achieved notable progress in voice interaction and audio analysis, their capabilities for deep metaphorical reasoning remains underexplored, especially with respect to audio-specific nuances. To bridge this gap, we introduce UNSPOKEN, a bilingual question answering benchmark specifically designed for an in-depth assessment of ALMs' metaphor comprehension capabilities. Unlike text-based benchmarks, UNSPOKEN emphasizes audio-specific cues that are crucial for metaphor comprehension yet often absent in transcriptions, such as prosody, phonetic ambiguity, and emotional inflection. Extensive experiments with 22 models show that even the best-performing model achieves only 69.5% accuracy, which still lags significantly behind the human average of 81.1%. This highlights a persistent gap between current models and human-level performance in metaphorical reasoning. Delving deeper into the error patterns, we identify five key failure modes that illuminate the inherent limitations of current ALMs in reasoning, context, prosody, and cultural awareness. We make UNSPOKEN publicly available and hope it will serve as a crucial resource for driving ALMs toward deeper audio understanding.
 			<br>
 			<br>
 				This page is <b>intended</b> solely for the purpose of research demonstration.
 			<br>
 		  </p>
 	</div>		
-<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">		
-	<h2 id="model-overview" style="text-align: center;">Overview</h2>
-	<body>
-		<p style="text-align: center;">
-			<img src="pics/framework.svg" width="1200">
-		</p>
-	</body>
-
-</div>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
     <h2 id="sr-samples" style="text-align: center;">Q&A</h2>
@@ -62,105 +54,454 @@
     <div class="container">
         <!-- Question 1 -->
         <h3 style="color: #4285f4;">Question 1:</h3>
-        <p>What is the implied meaning when the speaker says "it's raining cats and dogs"?</p>
+        <p>Which of the following best reflects the implied humor in this story segment?</p>
         
         <div class="bg-light p-3 rounded mb-4">
             <audio controls style="width: 100%;">
-                <source src="audio/rain.mp3" type="audio/mp3">
+                <source src="audio/uomZVM3R114_00_04_39,260_00_05_22,370.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
         
         <h4>Options:</h4>
         <div class="options mb-5">
-            <p><u>A. It's raining very heavily</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
-            <p>B. Animals are falling from the sky</p>
-            <p>C. The weather is unpredictable</p>
-            <p>D. The speaker is exaggerating</p>
-            <p>E. There's a pet parade happening</p>
+            <p>A. "Roe versus Wade" is understood as a type of sports competition.</p>
+            <p><u>B. "Roe versus Wade" is misunderstood as two ways to cross a river to America.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>C. The famous U.S. abortion case is correctly explained.</p>
+            <p>D. The character demonstrates a deep understanding of legal issues.</p>
+            <p>E. The literal meaning of "roe" is emphasized as fish eggs.</p>
+            <p>F. A new perspective on a historical event is presented.</p>
         </div>
 
         <!-- Question 2 -->
         <h3 style="color: #4285f4;">Question 2:</h3>
-        <p>What emotion is the speaker expressing in this audio clip?</p>
+        <p>Which of the following best reflects the implied humor in this story segment?</p>
         
         <div class="bg-light p-3 rounded mb-4">
             <audio controls style="width: 100%;">
-                <source src="audio/question2.wav" type="audio/wav">
+                <source src="audio/yz2bZgPSyH0_001155_001237.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
         
         <h4>Options:</h4>
         <div class="options mb-5">
-            <p>A. Anger</p>
-            <p><u>B. Excitement</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
-            <p>C. Sadness</p>
-            <p>D. Fear</p>
-            <p>E. Confusion</p>
+            <p>A. The speaker is describing a new medical condition that combines symptoms of arthritis with feelings of romance.</p>
+            <p>B. The phrase 'romantic arthritis' highlights the emotional struggles caused by chronic illness.</p>
+            <p><u>C. The speaker humorously uses wordplay to create an absurd connection between rheumatoid arthritis and romance.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. The speaker's father supports their romantic endeavors despite their health issues.</p>
+            <p><u>E. The pun in 'romantic arthritis' creates a comedic effect by pairing two unrelated concepts: romance and physical pain.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>F. The story suggests that the speaker inherited their romantic tendencies from their parents.</p>
         </div>
 
-        <!-- Question 3 -->
-        <h3 style="color: #4285f4;">Question 3:</h3>
-        <p>What is the main topic of this conversation?</p>
-        
+
+            <!-- Question 3 -->
+            <h3 style="color: #4285f4;">Question 3:</h3>
+            <p>What can be inferred about the humor and message in this segment?</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/15_000005_000054.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. The speaker is genuinely admitting that all men are stupid.</p>
+                <p><u>B. The speaker uses irony to highlight the absurdity of men being completely honest about their marital status on dating sites.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p><u>C. The speaker believes that no man would be foolish enough to openly admit being married while using a dating site.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>D. The speaker is critiquing societal expectations of honesty in relationships.</p>
+                <p><u>E. The humor comes from the speaker’s self - deprecating acknowledgment of men’s tendency to hide their marital status.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>F. The speaker suggests that all men are naturally open and truthful on dating platforms.</p>
+            </div>
+
+            <!-- Question 4 -->
+            <h3 style="color: #4285f4;">Question 4:</h3>
+            <p>请分析该片段所体现的文化现象与幽默元素。</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/rORuJY9mBKk_012057_012149.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 本地人为主讲者在异国他乡见到自己的亲人感到共情。</p>
+                <p><u>B. 通过‘他乡遇我儿’表达文化输出的情感连接与异国对中国文化的误解。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p><u>C. 当地人误解TF boys笔记本上的图案，认为其代表了主讲人的‘孩子’。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>D. 主讲人把‘周边’送给同事，展现了文化差异带来的幽默和误解。</p>
+                <p><u>E. 本地人激动地问‘Are they your babies’，反映了文化符号的误读。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>F. TF boys在海外的商品化表现了中国流行文化的全球化现象。</p>
+            </div>
+
+            <!-- Question 5 -->
+            <h3 style="color: #4285f4;">Question 5:</h3>
+            <p>根据音频内容，关于中间座位男生的描述，以下哪些选项是正确的？</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/vFLdVR1HxlY_00_04_46,440_00_06_19,030.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. Middle bench guys are very active in campus social activities.</p>
+                <p><u>B. Middle bench guys tend to be passive in love - related matters.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>C. Middle bench guys often take the initiative to help those in relationships.</p>
+                <p>D. Middle bench guys are described as completely inactive in all aspects.</p>
+                <p><u>E. Middle bench guys wait for others to break up so that they can get married to the ones who broke up.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>F. Middle bench guys are excellent students with high academic achievements.</p>
+            </div>
+
+            <!-- Question 6 -->
+            <h3 style="color: #4285f4;">Question 6:</h3>
+            <p>以下哪些选项准确理解了文本中“插上葡萄糖”这一表述的含义和作用？</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/dZA0SSDboVw_001549_001646.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 孩子玩手机时需要实际插上葡萄糖来维持能量。</p>
+                <p><u>B. 家长通过“插上葡萄糖”的比喻表达了对孩子沉迷手机的无奈和讽刺。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p><u>C. 葡萄糖在这里被用作一种幽默的隐喻，暗示孩子像一台需要持续能量供应的机器。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>D. 孩子真的可以通过葡萄糖补充体力从而玩手机一个礼拜。</p>
+                <p>E. 这段话主要是在讨论葡萄糖在医疗领域的实际用途。</p>
+                <p><u>F. “插上葡萄糖”与手机充电形成类比，制造了荒诞的幽默感。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            </div>
+            
+            <!-- Question 7 -->
+            <h3 style="color: #4285f4;">Question 7:</h3>
+            <p>What aspects make the mother's comment on the stretcher funny?</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/yz2bZgPSyH1_00_25_30,890_00_25_41,240.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. The stretcher can actually be stretched easily.</p>
+                <p><u>B. The mother's suggestion is completely illogical in the situation, creating a comical effect.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p><u>C. The contrast between the serious situation and the mother's absurd comment.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>D. The stretcher is a special kind of stretchable one.</p>
+                <p><u>E. The mother's tone when making the comment.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>F. The use of the word ""thin"" to describe the stretcher.</p>
+            </div>           
+
+            <!-- Question 8 -->
+            <h3 style="color: #4285f4;">Question 8:</h3>
+            <p>以下哪些内容揭示了该段故事中隐含的隐喻意图?</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/vFLdVR1HxlY_00_04_46,440_00_06_19,030.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p><u>A. 男明星代言卫生巾会引起了粉丝的大量的讨论。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>B. 主讲人通过男人代言女性用品的反差语言带来了幽默的尴尬感。</p>
+                <p><u>C. 男明星的代言打破了卫生巾品牌传统的代言模式。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p><u>D. 男明星的“流量”被赋予了所代言产品功能的双关隐喻效果。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>E. 主讲人对男明星代言卫生巾进行了深刻的文化分析。</p>
+                <p><u>F. 卫生巾需要吸收大量“流量”，与男明星代言人的明星关注流量相呼应。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            </div>
+
+            <!-- Question 9 -->
+            <h3 style="color: #4285f4;">Question 9:</h3>
+            <p>以下哪几项最能体现该段故事中的隐含隐喻意图?</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/iPTiHxjtW1w_00_06_34_00_06_59.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 故事强调了手语舞是一种需要高超技巧的表演形式，暗示了“我”的多才多艺。</p>
+                <p><u>B. 公司年会旨在通过多样的节目展示员工的才艺和风采，促进团队融合。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>C. 车间同事们非常欣赏“我”的才华，因此推选“我”去表演手语舞以展示团队的独特性。</p>
+                <p>D. 通过手语舞象征性地表达了女性在车间工作环境中缺乏话语权的无奈与自嘲。</p>
+                <p>E. 故事暗示了现代企业管理中存在形式主义，不真正关心员工的真实意愿和感受。</p>
+                <p>F. 故事反映了“我”对年会表演安排的困惑，但最终理解并接受了组织的决定，体现了顾全大局的精神。</p>
+            </div>
+
+            <!-- Question 10 -->
+            <h3 style="color: #4285f4;">Question 10:</h3>
+            <p>根据提供的音频，最能体现该段故事中的隐含笑点的选项是？</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/TDEXjX3RFOE_011825_011859.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 主角在强调舞台事故的严重性，以引起观众同情。</p>
+                <p><u>B. 主角通过否认疼痛，将失败的舞台事故转化为行为艺术，体现了语言的反转幽默。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>C. 主角认为艺术家必须承受痛苦，才能创作出伟大的作品。</p>
+                <p><u>D. 主角通过“不喊疼”的态度，讽刺了人们对艺术家和舞台事故的刻板印象。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>E. 主角的真实意图是批评舞台安全管理的不足。</p>
+                <p>F. 主角通过对比“疼痛”和“艺术”，揭示了艺术创作中对痛苦的浪漫化倾向。</p>
+            </div> 
+            
+            <!-- Question 10 -->
+            <h3 style="color: #4285f4;">Question 10:</h3>
+            <p>根据提供的音频，最能体现该段故事中的隐含笑点的选项是？</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/TDEXjX3RFOE_011825_011859.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 主角在强调舞台事故的严重性，以引起观众同情。</p>
+                <p><u>B. 主角通过否认疼痛，将失败的舞台事故转化为行为艺术，体现了语言的反转幽默。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>C. 主角认为艺术家必须承受痛苦，才能创作出伟大的作品。</p>
+                <p><u>D. 主角通过“不喊疼”的态度，讽刺了人们对艺术家和舞台事故的刻板印象。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>E. 主角的真实意图是批评舞台安全管理的不足。</p>
+                <p>F. 主角通过对比“疼痛”和“艺术”，揭示了艺术创作中对痛苦的浪漫化倾向。</p>
+            </div> 
+            
+            <!-- Question 11 -->
+            <h3 style="color: #4285f4;">Question 11:</h3>
+            <p>以下哪些项最能体现该段故事中的隐含隐喻意图?</p>
+
+            <div class="bg-light p-3 rounded mb-4">
+                <audio controls style="width: 100%;">
+                    <source src="audio/SGQ6NBOYzsY_01_00_10,390_01_00_32,580.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <h4>Options:</h4>
+            <div class="options mb-5">
+                <p>A. 通过年龄和工作经验的对比，主讲人展示了自己对年龄和工作经验之间的的区别理解。</p>
+                <p>B. 通过“年龄减五岁”这一伏笔，主讲人表达了自己在面试中窘迫，从而引发了幽默感。</p>
+                <p>C. 主讲人通过对人的皮肤状态，以及各种机能表现出来的现状，科学分析出年龄后却默默减掉5岁而引起了反差幽默感。</p>
+                <p><u>D. 年龄越小代表越显年轻，然而，工作经验应该是越久能力越高，在这里通过年龄减5岁的伏笔，自嘲了自己工作能力不足的幽默感。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+                <p>E. 通过借助女生的回应与第一人称的猜测形成了巧妙呼应。</p>
+                <p>F. 通过描述猜测年龄的过程强调了主讲人对女性真实年龄研究的认真和专业性。</p>
+            </div>   
+            
+        <!-- Question 12 -->
+        <h3 style="color: #4285f4;">Question 12:</h3>
+        <p>以下哪几项最能体现该段故事中的隐含隐喻意图?</p>
+
         <div class="bg-light p-3 rounded mb-4">
             <audio controls style="width: 100%;">
-                <source src="audio/question3.wav" type="audio/wav">
-                Your browser does not support the audio element.
+                <source src="audio/SGQ6NBOYzsY_01_02_52,540_01_03_09,770.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
             </audio>
-        </div>
-        
-        <h4>Options:</h4>
-        <div class="options mb-5">
-            <p>A. Weather forecast</p>
-            <p>B. Family vacation</p>
-            <p><u>C. Career planning</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
-            <p>D. Shopping plans</p>
-            <p>E. Weekend activities</p>
         </div>
 
-        <!-- Question 4 -->
-        <h3 style="color: #4285f4;">Question 4:</h3>
-        <p>What is the speaker's attitude towards the situation?</p>
-        
-        <div class="bg-light p-3 rounded mb-4">
-            <audio controls style="width: 100%;">
-                <source src="audio/question4.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        
         <h4>Options:</h4>
         <div class="options mb-5">
-            <p>A. Indifferent</p>
-            <p>B. Hostile</p>
-            <p>C. Nervous</p>
-            <p><u>D. Optimistic</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
-            <p>E. Skeptical</p>
+            <p>A. 作者认为“你本来就很美”这句护肤品广告词非常成功，因为它直接点明了产品的核心价值。</p>
+            <p>B. 剧本的主要目的是为了推广作者自己构思的、不敷衍的广告词。</p>
+            <p><u>C. 通过凉茶广告“你本来就不上火”这个更极端的例子，强化了护肤品广告词“你本来就很美”的敷衍感和逻辑上的不合理性。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p><u>D. 运用类比手法，指出“你本来就很美”这类广告词，就像对一个不需要降火的人推销凉茶一样，从根本上否定了消费者使用该产品的潜在需求，因此显得敷衍。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>E. 剧本揭示了所有护肤品广告都普遍存在夸大宣传和不切实际的问题。</p>
+            <p>F. 作者暗示，无论是护肤品还是凉茶，其广告创意都应该更加关注目标消费者的真实痛点，而不是流于表面。</p>
+        </div>
+        
+        <!-- Question 13 -->
+        <h3 style="color: #4285f4;">Question 13:</h3>
+        <p>根据提供的音频内容，以下哪些选项最能体现该段故事中的隐含笑点？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/y9QVZvcOL3U_023133_023224.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
         </div>
 
-        <!-- Question 5 -->
-        <h3 style="color: #4285f4;">Question 5:</h3>
-        <p>What is the appropriate response to this conversation?</p>
-        
-        <div class="bg-light p-3 rounded mb-4">
-            <audio controls style="width: 100%;">
-                <source src="audio/question5.wav" type="audio/wav">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        
         <h4>Options:</h4>
         <div class="options mb-5">
-            <p>A. Change the subject</p>
-            <p>B. Disagree strongly</p>
-            <p><u>C. Show understanding and support</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
-            <p>D. Remain silent</p>
-            <p>E. Express doubt</p>
+            <p>A. 主讲人通过“摸鱼”一词表达了对懒惰行为的强烈批评。</p>
+            <p><u>B. “同时摸两份鱼”形象化地描绘了一个人在两种场景中偷懒的行为。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p><u>C. 这句话通过夸张手法展现了“摸鱼”行为的滑稽感。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. 主讲人认为“摸鱼”是一种值得提倡的生活方式。</p>
+            <p>E. “摸鱼”在这里仅仅指代字面意义上的捕鱼活动。</p>
+            <p>F. 这句话暗示了现代职场和学习环境中普遍存在的偷懒现象。</p>
         </div>
-    </div>
-</div>
+        
+        <!-- Question 14 -->
+        <h3 style="color: #4285f4;">Question 14:</h3>
+        <p>以下哪个选项最能体现这段故事中的隐含笑点？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/wppJ9icLFEo_000501_000538.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. 主讲人准备讲述一个关于高尔夫事故的故事。</p>
+            <p>B. 短语“golf smacked”指的是被高尔夫球击中，这是故事的核心。</p>
+            <p><u>C. 主讲人使用“golf smacked”作为对“gobsmacked”这一表达的幽默变体，创造了一个双关语。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. 故事涉及一个有人在打高尔夫时受伤的戏剧性事件。</p>
+            <p>E. 短语“you will be golf smacked”表明即将讲述的故事有暴力主题。</p>
+            <p>F. “golf smacked”的使用强调了讲故事时体育精神的重要性。</p>
+        </div>
+        
+        <!-- Question 15 -->
+        <h3 style="color: #4285f4;">Question 15:</h3>
+        <p>以下哪个选项最能体现这段故事中的隐含笑点？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/149_000000_000047.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. 说话者对室友不收拾自己的东西感到恼火。</p>
+            <p>B. 男朋友的行为反映了对家务琐事的一种幽默误解。</p>
+            <p>C. 说话者觉得在洗碗机里发现男朋友的蛋白粉很有趣，因为这是个不寻常的存放地方。</p>
+            <p>D. 说话者在考虑是否应该自己去收拾男朋友弄乱的东西。</p>
+            <p><u>E. 幽默源于男朋友表现得好像他住在这所房子里，在居住情况中造成了一种尴尬的不平衡。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>F. 说话者认为室友应该就她男朋友的行为与他对质。</p>
+        </div>
+        
+        <!-- Question 16 -->
+        <h3 style="color: #4285f4;">Question 16:</h3>
+        <p>Which of the following best reflects the implied humor in this story segment?</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/uomZVM3R114_00_08_29_00_08_44.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. Journalists like to talk about animal sounds.</p>
+            <p>B. "Neigh - sayer" is a profession related to horses.</p>
+            <p><u>C. The pun links the sound of a horse with "nay - sayer."</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. The importance of horses in Chinese zodiac culture is emphasized.</p>
+            <p>E. "Year of the horse" implies an astrological phenomenon.</p>
+            <p>F. Journalism tends to use complex sentences.</p>
+        </div>
+
+        <!-- Question 17 -->
+        <h3 style="color: #4285f4;">Question 17:</h3>
+        <p>以下哪个选项能体现这段内容中的隐含幽默？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/uomZVM3R114_00_12_16_00_12_28.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. 说话者从非传统的角度解读婚姻成功率。</p>
+            <p><u>B. 50%的成功率被视为高而非低。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>C. 这种对比产生了幽默效果。</p>
+            <p>D. 它体现了对婚姻长久性的怀疑。</p>
+            <p>E. 说话者将成功的婚姻定义为“永远在一起”。</p>
+            <p><u>F. 说话者对婚姻成功率的反向惊讶。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+        </div>
+        
+        <!-- Question 18 -->
+        <h3 style="color: #4285f4;">Question 18:</h3>
+        <p>Which of the following best reflects the implied humor in this story segment?</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/Bq7O57JOFAM_000508_000857.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. The speaker is genuinely interested in joining gangs and doing drugs again.</p>
+            <p>B. The speaker feels that voting is as dangerous as joining gangs or doing drugs.</p>
+            <p>C. The speaker believes that CNN accurately represents the political threats facing the country.</p>
+            <p><u>D. The speaker is nostalgic for childhood when dangers were clear, unlike the ambiguity of voting.</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>E. The speaker's friends are pressuring them to return to their old gang lifestyle.</p>
+            <p>F. The speaker trusts the health plan of the Democratic party without question.</p>
+        </div>
+
+        <!-- Question 19 -->
+        <h3 style="color: #4285f4;">Question 19:</h3>
+        <p>以下哪个选项能体现这段内容中的隐含幽默？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/rORuJY9mBKk_014114_014207.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. 主讲人认为钢铁侠的死亡是因为缺乏保护。</p>
+            <p><u>B. 主讲人通过假设“旺夫女”的存在来调侃钢铁侠的悲剧结局。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>C. 主讲人表达了对钢铁侠电影结局的不满。</p>
+            <p>D. 主讲人认为钢铁侠的科技装备不够先进导致了他的死亡。</p>
+            <p>E. 主讲人希望钢铁侠能有一个更强大的盟友来避免死亡。</p>
+            <p>F. 主讲人强调了女性角色在超级英雄电影中的重要性。</p>
+        </div>
+
+        <!-- Question 20 -->
+        <h3 style="color: #4285f4;">Question 20:</h3>
+        <p>以下哪个选项体现了文段中的隐含幽默？</p>
+
+        <div class="bg-light p-3 rounded mb-4">
+            <audio controls style="width: 100%;">
+                <source src="audio/5N3uDNlvOpQ_00_03_51,470_00_04_44,875.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </source>
+            </audio>
+        </div>
+
+        <h4>Options:</h4>
+        <div class="options mb-5">
+            <p>A. 演讲者用一个简短的承诺话语幽默开场，以与观众建立联系。</p>
+            <p>B. 主要目的是取悦观众，让他们感到放松。</p>
+            <p><u>C. 演讲者幽默地将自己想简短发言的愿望与亨利八世对他的妻子们的想法作比较。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>D. 演讲者暗示自己有其他重要事情，想尽快结束演讲。</p>
+            <p><u>E. 演讲者表示要简短发言是出于专业原因，但被幽默地比作国王想宠幸多位妻子的愿望。</u> <img src="pics/right.png" alt="Correct" style="height: 20px; margin-left: 10px;"></p>
+            <p>F. 亨利八世对他的每个妻子都说过类似的话。</p>
+        </div>
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">	
 	<h2 id=Ethics-Statement style="text-align: center;">	
